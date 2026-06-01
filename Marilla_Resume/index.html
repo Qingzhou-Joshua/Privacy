@@ -670,6 +670,68 @@ body {
   flex-wrap: wrap;
 }
 
+.exp-links {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.exp-links-label {
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 12px;
+}
+
+.exp-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  margin-bottom: 6px;
+  text-decoration: none;
+  color: var(--text-secondary);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  transition: all 0.3s var(--ease);
+}
+
+.exp-link:hover {
+  border-color: var(--honey-border);
+  background: var(--honey-subtle);
+  color: var(--honey-dark);
+}
+
+.exp-link svg:first-child {
+  flex-shrink: 0;
+  color: var(--text-tertiary);
+}
+
+.exp-link:hover svg:first-child {
+  color: var(--honey);
+}
+
+.exp-link svg:last-child {
+  flex-shrink: 0;
+  margin-left: auto;
+  opacity: 0.4;
+}
+
+.exp-link:hover svg:last-child {
+  opacity: 1;
+  color: var(--honey-dark);
+}
+
+.exp-link span {
+  flex: 1;
+}
+
 .metric {
   text-align: center;
   padding: 18px 28px;
@@ -982,6 +1044,32 @@ body {
   color: var(--cream);
 }
 
+.modal-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  margin-bottom: 16px;
+  padding: 10px 20px;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--honey-dark);
+  background: var(--honey-subtle);
+  border: 1px solid var(--honey-border);
+  border-radius: var(--radius-sm);
+  transition: all 0.3s var(--ease);
+}
+
+.modal-link:hover {
+  background: var(--charcoal);
+  border-color: var(--charcoal);
+  color: var(--cream);
+}
+
 .modal-title {
   font-family: var(--display);
   font-size: 1.5rem;
@@ -1223,6 +1311,7 @@ body {
   .exp-company { font-size: 1.2rem; }
   .exp-highlights li { font-size: 0.82rem; padding-left: 18px; margin-bottom: 10px; }
   .exp-metrics { flex-direction: column; gap: 8px; margin-top: 20px; }
+  .exp-link { font-size: 0.75rem; padding: 9px 12px; }
   .metric { padding: 14px 20px; }
 
   /* Projects */
@@ -1564,6 +1653,19 @@ body {
           <div class="metric"><div class="metric-value">15+</div><div class="metric-label">智能体搭建</div></div>
           <div class="metric"><div class="metric-value">1.4万</div><div class="metric-label">累计使用量</div></div>
           <div class="metric"><div class="metric-value">60%+</div><div class="metric-label">试错成本降低</div></div>
+        </div>
+        <div class="exp-links">
+          <div class="exp-links-label">代表作品</div>
+          <a class="exp-link" href="https://bot.n.cn/tools/aiagent/chat/1c19905be6af434e93db46bc7d721852?share=1" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 014 4c0 1.95-1.4 3.58-3.25 3.93L12 16l-.75-6.07A4.001 4.001 0 0112 2z"/><path d="M8.5 16l-2 6h11l-2-6"/><circle cx="12" cy="6" r="1"/></svg>
+            <span>星命风水顾问 · L3推理智能体</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+          <a class="exp-link" href="https://www.n.cn/tools/aiagent/chat/7d9015800421452faa3fa6a140cc2027?share=1" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 15l-3.09-3.09a2 2 0 00-2.83 0L6 21"/></svg>
+            <span>自媒体封面生成器 · AI创作工具</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
         </div>
       </div>
     </div>
@@ -1968,6 +2070,8 @@ const projectDetails = {
   legalpath: {
     title: 'LegalPath 法律信息服务平台',
     subtitle: '项目负责人 · 2026.02 — 2026.04',
+    link: 'https://www.figma.com/proto/Rj5Lql3m3IYTeFnTAeBp9r/9511?node-id=0-1&t=X6SytEE3NYDPclJG-1',
+    linkLabel: '查看原型',
     body: `<p><strong>用户调研与需求分析：</strong>通过问卷调查与竞品分析，识别用户在信息理解、搜索效率及可访问性方面的痛点；结合用户画像与使用场景梳理核心需求。</p>
     <p><strong>信息架构与交互设计：</strong>构建8大核心页面结构，优化导航逻辑与页面层级，降低用户搜索成本；设计搜索建议、案例筛选及流程进度可视化。</p>
     <p><strong>UI界面设计：</strong>基于Figma完成高保真界面设计，统一视觉风格（配色、字体、组件系统），提升界面一致性与可读性。</p>
@@ -1976,6 +2080,8 @@ const projectDetails = {
   cileme: {
     title: '【辞了么】职场情绪打卡APP',
     subtitle: '核心项目成员 · 2026.01 — 2026.03',
+    link: 'https://apps.apple.com/cn/app/%E8%BE%9E%E4%BA%86%E6%B2%A1/id6760989161',
+    linkLabel: 'App Store',
     body: `<p><strong>项目背景：</strong>面向职场人群打造趣味化职场情绪打卡产品，以每日打卡形式实现职场情绪轻量化记录与正向疏导。</p>
     <p><strong>市场调研：</strong>利用AI工具完成用户画像深度剖析，借助ChatGPT进行需求梳理与文档撰写，项目交付效率提升70%。</p>
     <p><strong>AI原型设计：</strong>使用AI原型工具Stitch，基于产品需求快速输出可交互原型。</p>
@@ -1998,6 +2104,7 @@ function openModal(id) {
     <div class="modal-title">${data.title}</div>
     <div class="modal-subtitle">${data.subtitle}</div>
     <div class="modal-body">${data.body}</div>
+    ${data.link ? `<a class="modal-link" href="${data.link}" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>${data.linkLabel || '访问项目'}</a>` : ''}
   `;
   document.getElementById('modalOverlay').classList.add('active');
   document.body.style.overflow = 'hidden';
